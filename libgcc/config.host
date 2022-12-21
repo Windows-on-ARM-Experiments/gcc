@@ -406,6 +406,9 @@ aarch64*-*-linux*)
 	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
 	tmake_file="${tmake_file} t-dfprules"
 	;;
+aarch64*-*-pe)
+	md_unwind_header=aarch64/aarch64-unwind.h
+	;;
 aarch64*-*-vxworks7*)
 	extra_parts="$extra_parts crtfastmath.o"
 	md_unwind_header=aarch64/aarch64-unwind.h

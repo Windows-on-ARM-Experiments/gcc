@@ -27593,7 +27593,7 @@ aarch64_run_selftests (void)
 #define TARGET_ALIGN_ANON_BITFIELD hook_bool_void_true
 
 #undef TARGET_ASM_ALIGNED_DI_OP
-#define TARGET_ASM_ALIGNED_DI_OP "\t.xword\t"
+#define TARGET_ASM_ALIGNED_DI_OP "\t.quad\t"
 
 #undef TARGET_ASM_ALIGNED_HI_OP
 #define TARGET_ASM_ALIGNED_HI_OP "\t.hword\t"

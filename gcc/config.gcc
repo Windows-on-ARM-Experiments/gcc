@@ -588,6 +588,10 @@ then
 fi
 
 case ${target} in
+aarch64*-*-pe)
+	tm_p_file="${tm_p_file} arm/aarch-common-protos.h"
+	tm_file="aarch64/biarchllp64.h ${tm_file}"
+	;;
 aarch64*-*-*)
 	tm_p_file="${tm_p_file} arm/aarch-common-protos.h"
 	case ${with_abi} in
@@ -1191,6 +1195,10 @@ aarch64*-*-linux*)
 		esac
 	done
 	TM_MULTILIB_CONFIG=`echo $TM_MULTILIB_CONFIG | sed 's/^,//'`
+	;;
+aarch64*-*-pe)
+	tm_file="${tm_file} coff.h"
+	tmake_file="${tmake_file} aarch64/t-aarch64"
 	;;
 aarch64*-wrs-vxworks*)
         tm_file="${tm_file} elfos.h aarch64/aarch64-elf.h"

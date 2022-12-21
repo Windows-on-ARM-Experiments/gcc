@@ -875,7 +875,8 @@ typedef struct GTY (()) machine_function
 enum aarch64_abi_type
 {
   AARCH64_ABI_LP64 = 0,
-  AARCH64_ABI_ILP32 = 1
+  AARCH64_ABI_ILP32 = 1,
+  AARCH64_ABI_LLP64 = 2
 };
 
 #ifndef AARCH64_ABI_DEFAULT
